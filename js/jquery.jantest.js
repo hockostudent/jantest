@@ -1,11 +1,23 @@
 /**
- * Self evaluationg script
+ * Self evaluating script
  * @return {none}
  */
 $(function(){
 
-	var JanTest = function() {
-		console.log(this);
+	var seconds = 10;
+
+	function countDown() {
+
+		if( seconds > 0 ) {
+			setTimeout(function(){
+				seconds--;
+				$('.countdown').html(seconds);
+				countDown();
+			}, 1000);
+		}
+
 	}
+
+	countDown();
 
 });
