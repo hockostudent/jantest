@@ -4,6 +4,8 @@
  */
 $(function(){
 
-	alert('test');
+	var JanTest = function() {
+		console.log(this);
+	}
 
 });
